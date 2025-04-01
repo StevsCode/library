@@ -1,0 +1,56 @@
+* {
+    border: solid 1px black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: calc(1rem + 0.5vw);
+    font-weight: 600;
+    font-family: 'Commissioner', Times, serif;
+    margin: 0px;
+}
+
+img {
+    width: calc(16px + 1vw);
+    height: auto;
+    filter: invert(1);
+}
+
+.logo {
+    width: calc(16px + 2.5vw);
+    height: auto;
+}
+
+.page {
+    font-size: calc(1rem + 1.7vw);
+}
+
+.header {
+    background-color: #2C2C2C;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    color: #FFFFFF;
+    min-width: 1050px;
+}
+
+.left, .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 8000px;
+}
+
+.login {
+    font-size: calc(0.7rem + 0.5vw);
+    font-weight: 600;
+    font-family: 'Commissioner', Times, serif;
+    background-color: rgb(90, 168, 0);
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border: outset 2px green;
+    border-radius: 30px;
+    margin: 15px 0px;
+}
