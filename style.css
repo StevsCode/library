@@ -9,6 +9,7 @@ body {
     font-weight: 600;
     font-family: 'Commissioner', Times, serif;
     margin: 0px;
+    height: 100vh;
 }
 
 img {
@@ -40,17 +41,41 @@ img {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    max-width: 8000px;
 }
 
-.login {
+button {
     font-size: calc(0.7rem + 0.5vw);
     font-weight: 600;
     font-family: 'Commissioner', Times, serif;
     background-color: rgb(90, 168, 0);
     color: #FFFFFF;
     padding: 12px 24px;
-    border: outset 2px green;
+    border: outset 1px green;
     border-radius: 30px;
     margin: 15px 0px;
+}
+
+.central {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.5);
+}
+
+.add {
+    padding: 6px 15px;
+}
+
+.central > div {
+    padding: 25px;
+    padding-bottom: 0px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
