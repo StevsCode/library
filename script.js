@@ -32,6 +32,12 @@ function displayBooks() {
 
     libraryDisplay.appendChild(bookCard);
   });
+
+  document.querySelectorAll(".remove-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+        removeBook(event.target.dataset.id);
+    });
+  });
 }
 
 document.getElementById("new-book-btn").addEventListener("click", () => {
@@ -58,3 +64,8 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
 
   document.getElementById("book-form-modal").close();
 });
+
+function removeBook(bookId) {
+  myLibrary = myLibrary.filter(book => book.id !== bookId);
+  displayBooks(); // Refresh the display after removal
+}
