@@ -65,15 +65,11 @@ button {
     box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.5);
     background-color: white;
     max-width: 600px;
+    padding: 25px;
 }
 
 .add {
     padding: 6px 15px;
-}
-
-.central > div {
-    padding: 25px;
-    padding-bottom: 0px;
 }
 
 .main {
@@ -88,6 +84,14 @@ dialog {
     padding: 20px 150px;
     border-radius: 30px;
     border: inset black 2px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+dialog[open] {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 input {
@@ -98,4 +102,65 @@ input {
 form button {
     display: block;
     margin: 0 auto;
+}
+
+.book-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    min-width: 250px;
+    max-width: 750px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Commissioner", sans-serif;
+    text-align: center;
+}
+
+.book-card h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 35px;
+}
+
+.book-card p {
+    font-size: 20px;
+    margin: 3px 0;
+}
+
+.toggle-read-btn, .remove-btn {
+    margin-top: 8px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-read-btn {
+    background-color: #007bff; /* Blu */
+    color: white;
+}
+
+.remove-btn {
+    background-color: #dc3545; /* Rosso */
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:hover {
+    background-color: #a71d2a;
+}
+
+#book-form-modal {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#book-form-modal[open] {
+  opacity: 1;
+  transform: translateY(0);
 }
