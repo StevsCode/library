@@ -28,10 +28,19 @@ function displayBooks() {
       <p><strong>Genre:</strong> ${book.genre}</p>
       <p><strong>Year:</strong> ${book.year}</p>
       <p><strong>Read:</strong> ${book.read}</p>
+      <button class="toggle-read-btn" data-id="${book.id}">Toggle Read</button>
+      <button class="remove-btn" data-id="${book.id}">Remove</button>
     `;
 
     libraryDisplay.appendChild(bookCard);
   });
+
+  document.querySelectorAll(".toggle-read-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+        toggleRead(event.target.dataset.id);
+    });
+  });
+
 
   document.querySelectorAll(".remove-btn").forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -68,4 +77,16 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
 function removeBook(bookId) {
   myLibrary = myLibrary.filter(book => book.id !== bookId);
   displayBooks(); // Refresh the display after removal
+}
+
+Book.prototype.toggleReadStatus = function () {
+  this.read = this.read === "Yes" ? "No" : "Yes";
+};
+
+function toggleRead(bookId) {
+  const book = myLibrary.find(book => book.id === bookId);
+  if (book) {
+      book.toggleReadStatus();
+      displayBooks(); // Refresh the display after toggling
+  }
 }
