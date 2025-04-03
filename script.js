@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(title, author, genre, year, read) {
   this.id = crypto.randomUUID();
@@ -18,7 +18,7 @@ function displayBooks() {
   const libraryDisplay = document.getElementById("library-display");
   libraryDisplay.innerHTML = "";
 
-  myLibrary.forEach(book) => {
+  myLibrary.forEach((book) => {
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
 
@@ -54,7 +54,7 @@ document.getElementById("new-book-btn").addEventListener("click", () => {
 });
 
 document.getElementById("close-modal").addEventListener("click", () => {
-  document.getElementById("book-form-modal").closest();
+  document.getElementById("book-form-modal").close();
 });
 document.getElementById("book-form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -65,7 +65,7 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
   const year = document.getElementById("year").value;
   const read = document.getElementById("read").checked ? "Yes" : "No";
 
-  addBookToLibrary(title, author, genre, year);
+  addBookToLibrary(title, author, genre, year, read);
 
   displayBooks();
 

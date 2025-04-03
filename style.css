@@ -64,6 +64,7 @@ button {
     border-radius: 15px;
     box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.5);
     background-color: white;
+    max-width: 600px;
 }
 
 .add {
@@ -81,4 +82,20 @@ button {
     align-items: center;
     flex-grow: 1;
     background-color: rgb(0, 0, 0, 0.8);
+}
+
+dialog {
+    padding: 20px 150px;
+    border-radius: 30px;
+    border: inset black 2px;
+}
+
+input {
+    padding: 5px 5px;
+    font-size: 20px;
+}
+
+form button {
+    display: block;
+    margin: 0 auto;
 }

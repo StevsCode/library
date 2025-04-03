@@ -30,8 +30,33 @@
         <div class="central">
             <div>Your library is empty!</br>
             Click the + button to add a new book.</br></div>
-            <button class="add">+</button>
+            <button class="add" id="new-book-btn">+</button>
         </div>
+
+        <dialog id="book-form-modal">
+            <form id="book-form">
+                <h2>Add a New Book</h2>
+                </br>
+                <label for="title">Title:</label></br>
+                <input type="text" id="title" required></br>
+                </br>
+                <label for="author">Author:</label></br>
+                <input type="text" id="author" required></br>
+                </br>
+                <label for="genre">Genre:</label></br>
+                <input type="text" id="genre" required></br>
+                </br>
+                <label for="year">Year:</label></br>
+                <input type="number" id="year" required></br>
+                </br>
+                <label>
+                    <input type="checkbox" id="read"> Read
+                </label></br>
+                </br>
+                <button type="submit">Add Book</button></br>
+                <button type="button" id="close-modal">Close</button>
+            </form>
+        </dialog>
     </div>
 </body>
 </html>
